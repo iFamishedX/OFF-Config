@@ -1,6 +1,6 @@
 plugins {
     java
-    id("net.fabricmc.fabric-loom") version "1.8-SNAPSHOT"
+    id("fabric-loom") version "1.13.3"
 }
 
 base {
