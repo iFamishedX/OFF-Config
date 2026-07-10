@@ -1,29 +1,19 @@
-dependencyResolutionManagement {
-    pluginManagement {
-        repositories {
-            mavenCentral()
-            gradlePluginPortal()
-            maven("https://maven.fabricmc.net/") {
-                name = "Fabric"
-            }
-            mavenLocal()
-        }
-    }
-
+pluginManagement {
     repositories {
         mavenCentral()
-        maven("https://maven.fabricmc.net/") {
-            name = "Fabric"
-        }
-        maven("https://api.modrinth.com/maven") {
-            name = "Modrinth"
-        }
-        maven("https://maven.terraformersmc.com/") {
-            name = "TerraformerssMC"
-        }
-        maven("https://maven.isxander.dev/releases") {
-            name = "Xander Maven"
-        }
+        gradlePluginPortal()
+        maven("https://maven.fabricmc.net/") { name = "Fabric" }
+        mavenLocal()
+    }
+}
+
+dependencyResolutionManagement {
+    repositories {
+        mavenCentral()
+        maven("https://maven.fabricmc.net/") { name = "Fabric" }
+        maven("https://api.modrinth.com/maven") { name = "Modrinth" }
+        maven("https://maven.terraformersmc.com/") { name = "TerraformersMC" }
+        maven("https://maven.isxander.dev/releases") { name = "Xander Maven" }
         mavenLocal()
     }
 }
