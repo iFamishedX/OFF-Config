@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "mod_sets",
+  "version": "${version}",
+  "name": "ModSets",
+  "description": "${description}",
+  "authors": [
+    "${author}"
+  ],
+  "contact": {
+    "sources": "${source}",
+    "issues": "${source}/issues"
+  },
+  "license": "Apache License 2.0",
+  "icon": "assets/mod_sets/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "main": [
+      "settingdust.mod_sets.fabric.ModSetsFabric"
+    ],
+    "modmenu": [
+      "settingdust.mod_sets.fabric.ModSetsModMenu"
+    ]
+  },
+  "mixins": [
+    "mod_sets.mixins.json",
+    "mod_sets.fabric.mixins.json"
+  ],
+  "accessWidener": "mod_sets.accessWidener",
+  "depends": {
+    "fabricloader": ">=0.20.0",
+    "minecraft": "=26.1.2",
+    "java": ">=25"
+  },
+  "suggests": {
+    "modmenu": "*"
+  }
+}
