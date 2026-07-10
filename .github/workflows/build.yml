@@ -22,11 +22,15 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set up Java 25
+        id: setup-java
         uses: actions/setup-java@v4
         with:
           java-version: '25'
           distribution: 'temurin'
           cache: gradle
+
+      - name: Force JAVA_HOME to Java 25
+        run: echo "JAVA_HOME=${{ steps.setup-java.outputs.java-home }}" >> $GITHUB_ENV
 
       - name: Make gradlew executable
         run: chmod +x ./gradlew
