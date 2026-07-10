@@ -29,23 +29,19 @@ jobs:
           cache: gradle
 
       - name: Make gradlew executable
-        working-directory: ./OFF-Config
         run: chmod +x ./gradlew
 
       - name: Build mod
-        working-directory: ./OFF-Config
         run: ./gradlew build --stacktrace
 
       - name: Read mod version
         id: version
-        working-directory: ./OFF-Config
         run: |
           VERSION=$(grep "^mod_version" gradle.properties | cut -d'=' -f2 | tr -d ' ')
           echo "MOD_VERSION=$VERSION" >> "$GITHUB_OUTPUT"
 
       - name: Find built JAR
         id: jar
-        working-directory: ./OFF-Config
         run: |
           JAR=$(find build/libs -name "*.jar" \
             ! -name "*-sources.jar" \
