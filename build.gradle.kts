@@ -40,8 +40,6 @@ loom {
 
 java {
     toolchain.languageVersion.set(JavaLanguageVersion.of(javaVersion))
-    sourceCompatibility = JavaVersion.VERSION_25
-    targetCompatibility = JavaVersion.VERSION_25
 }
 
 tasks {
